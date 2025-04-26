@@ -65,11 +65,11 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: [result] auto [content__details] auto;
+  grid-template-columns: [result] auto [content__details] 1fr;
   justify-items: center;
   align-items: end;
   gap: 0 30px;
-  max-width: 1140px;
+  width: 1140px;
   margin: auto;
 }
 
@@ -86,6 +86,15 @@ ol {
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
+  outline: #fff 1px solid;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  text-decoration: underline;
 }
 
 .button:active {
@@ -107,13 +116,15 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
+  margin-top: 79px;
   margin-bottom: 16px;
 }
 
 .result__video {
   width: inherit;
   height: inherit;
-  object-fit: fill;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* search-form */
@@ -159,14 +170,15 @@ ol {
 
 .search-form__textfield {
   width: 100%;
-  height: 27px;
+  min-height: 27px;
   border-top: #fff 1px solid;
   border-right: none;
   border-bottom: #fff 1px solid;
   border-left: none;
   color: #fff;
-  font-size: 17px;
-  line-height: 17px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  line-height: 18px;
   background: transparent;
   cursor: text;
   appearance: none;
@@ -246,11 +258,6 @@ ol {
   line-height: 18px;
 }
 
-.search-form__submit-button:focus-visible {
-  outline: #fff 1px solid;
-  outline-offset: 1px;
-}
-
 /* второй section - content__details */
 
 .content__details {
@@ -260,6 +267,7 @@ ol {
 }
 
 .title {
+  margin-top: 4px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -277,7 +285,7 @@ ol {
   flex-direction: column;
   gap: 30px;
   max-height: 298px;
-  margin-top: 26px;
+  margin-top: 24px;
   overflow-y: auto;
 }
 
@@ -291,15 +299,15 @@ ol {
   padding: 0 3px;
 }
 
-.content__list-item:hover {
-  text-decoration: underline;
-}
-
 .content__card-link {
   display: block;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
 }
 
 .content__card-link:active {
@@ -327,6 +335,7 @@ ol {
 .content__video-card-description-container {
   display: inline-grid;
   flex-grow: 1;
+  padding-top: 3px;
 }
 
 .content__video-card-title {
@@ -355,7 +364,7 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  object-fit: fill;
+  object-fit: cover;
   object-position: center;
 }
 
