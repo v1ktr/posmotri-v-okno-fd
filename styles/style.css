@@ -336,6 +336,7 @@ ol {
   display: inline-grid;
   flex-grow: 1;
   padding-top: 3px;
+  max-width: 196px;
 }
 
 .content__video-card-title {
